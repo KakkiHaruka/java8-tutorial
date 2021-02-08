@@ -25,6 +25,7 @@ public class Lambda3 {
 
         // Predicates
 
+        //predicate接口主要用来判断一个参数是否符合需求
         Predicate<String> predicate = (s) -> s.length() > 0;
 
         predicate.test("foo");              // true

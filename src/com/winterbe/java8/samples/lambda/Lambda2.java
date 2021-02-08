@@ -5,6 +5,7 @@ package com.winterbe.java8.samples.lambda;
  */
 public class Lambda2 {
 
+    // 我么可以吧任意接口用作lambda表达式，只要这个接口只有一个抽象方法，为了确保该接口符合要求，需要加上注解@FunctionalInterface
     @FunctionalInterface
     public static interface Converter<F, T> {
         T convert(F from);
