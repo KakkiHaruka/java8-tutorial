@@ -29,6 +29,7 @@ public class Interface1 {
         formula1.sqrt(-23);          // 0.0
         Formula.positive(-4);        // 0.0
 
+        // lambda无法访问接口中的默认方法
 //        Formula formula2 = (a) -> sqrt( a * 100);
     }
 

@@ -55,6 +55,7 @@ public class Streams1 {
 
 
         // matching
+        // 匹配 anyMatch 是否有
 
         boolean anyStartsWithA = stringCollection
                 .stream()
@@ -62,12 +63,14 @@ public class Streams1 {
 
         System.out.println(anyStartsWithA);      // true
 
+        // allMatch 是否全部有
         boolean allStartsWithA = stringCollection
                 .stream()
                 .allMatch((s) -> s.startsWith("a"));
 
         System.out.println(allStartsWithA);      // false
 
+        // 是否没有
         boolean noneStartsWithZ = stringCollection
                 .stream()
                 .noneMatch((s) -> s.startsWith("z"));

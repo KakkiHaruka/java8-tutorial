@@ -47,12 +47,14 @@ public class Lambda3 {
 
 
         // Suppliers
+        // 无参获取一个对象实例
 
         Supplier<Person> personSupplier = Person::new;
         personSupplier.get();   // new Person
 
 
         // Consumers
+        // 传递逻辑，消费数据
 
         Consumer<Person> greeter = (p) -> System.out.println("Hello, " + p.firstName);
         greeter.accept(new Person("Luke", "Skywalker"));
@@ -71,6 +73,9 @@ public class Lambda3 {
 
 
         // Runnables
+        // 如果要写多线程的程序，可以继承Thread类。
+        // 但由于JAVA是单继承的语言，不能继承多个类，所以如果你这个程序需要继承其它的类，
+        // 而又要实现多线程的功能，就只好使用Runnable这个接口了。
 
         Runnable runnable = () -> System.out.println(UUID.randomUUID());
         runnable.run();

@@ -12,17 +12,20 @@ public class Lambda4 {
     void testScopes() {
         int num = 1;
 
+        // lamdba能够读写变量/静态变量
         Lambda2.Converter<Integer, String> stringConverter =
                 (from) -> String.valueOf(from + num);
 
         String convert = stringConverter.convert(2);
         System.out.println(convert);    // 3
 
+        // lambda能够读写全局变量
         Lambda2.Converter<Integer, String> stringConverter2 = (from) -> {
             outerNum = 13;
             return String.valueOf(from);
         };
 
+        // lambda能够读写列表中的值
         String[] array = new String[1];
         Lambda2.Converter<Integer, String> stringConverter3 = (from) -> {
             array[0] = "Hi there";
@@ -32,6 +35,8 @@ public class Lambda4 {
         stringConverter3.convert(23);
 
         System.out.println(array[0]);
+
+        // lambda无法访问接口中的默认方法
     }
 
     public static void main(String[] args) {
