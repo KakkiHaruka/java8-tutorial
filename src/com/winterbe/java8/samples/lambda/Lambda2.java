@@ -28,6 +28,7 @@ public class Lambda2 {
 
 
         // method reference
+        // 方法接口
 
         Converter<String, Integer> integerConverter2 = Integer::valueOf;
         Integer converted2 = integerConverter2.convert("123");
@@ -41,6 +42,7 @@ public class Lambda2 {
         System.out.println(converted3);    // result J
 
         // constructor reference
+        // 构造器接口
 
         PersonFactory<Person> personFactory = Person::new;
         Person person = personFactory.create("Peter", "Parker");

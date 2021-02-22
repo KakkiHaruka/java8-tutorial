@@ -1,6 +1,5 @@
 package com.winterbe.java8.samples.lambda;
 
-import org.omg.CORBA.CODESET_INCOMPATIBLE;
 
 import java.util.Arrays;
 import java.util.Collections;
