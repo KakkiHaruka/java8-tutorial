@@ -28,6 +28,11 @@ public class Person {
         this.age = age;
     }
 
+    // 重写toString，方便直接打印信息
+    public String toString() {
+        return getClass().getSimpleName() + "{name=" + name + "age=" + age + "}";
+    }
+
     /**
      * 如果使用stream中的distinct来对Person对象列表去重，就需要重写该方法
      *
@@ -49,6 +54,7 @@ public class Person {
 
     /**
      * 如果使用stream中的distinct来对Person对象列表去重，就需要重写该方法
+     *
      * @return
      */
     @Override

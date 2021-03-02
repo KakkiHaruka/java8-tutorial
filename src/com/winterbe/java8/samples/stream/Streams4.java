@@ -4,6 +4,7 @@ import java.util.OptionalInt;
 import java.util.stream.IntStream;
 
 /**
+ * IntStream Int数值流
  * @author Benjamin Winterberg
  */
 public class Streams4 {
